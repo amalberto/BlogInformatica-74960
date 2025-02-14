@@ -1,0 +1,10 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+// Estilos base/global
+@import "general/home";
+
+// Media queries
+@import "general/mq-tablet";
+@import "general/mq-desktop";
