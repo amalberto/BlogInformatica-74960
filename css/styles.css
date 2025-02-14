@@ -32,7 +32,7 @@ body {
     "contenido"
     "pie";
   grid-template-rows: auto auto 1fr auto;
-  gap: 1.5rem; /* Reduce el espaciado general */
+  gap: 1.5rem; 
   min-height: 100vh;
 }
 
@@ -113,7 +113,7 @@ body {
   padding: 2rem;
   width: 100%;
   max-width: 600px;
-  margin: 0 auto; /* Centrado horizontal */
+  margin: 0 auto; 
 }
 
 .contacto__info {
@@ -179,7 +179,7 @@ body {
   justify-content: center;
   padding: 2rem 1rem;
   text-align: center;
-  max-width: 100%; /* Ancho total */
+  max-width: 100%; 
 }
 
 
@@ -204,15 +204,16 @@ body {
 .pagina {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Asegura que el contenido ocupe al menos la pantalla completa */
+  min-height: 100vh; 
 }
 
 .pagina__contenido {
-  flex: 1; /* Ocupa el espacio restante para empujar el footer hacia abajo */
+  flex: 1;
 }
 
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* ===== DISEÑO RESPONSIVO UTILIZANDO MEDIA QUERYS ===== */
+
 /* Para Desktop (≥1024px) */
 @media (min-width: 1024px) {
   .pagina__contenido {
@@ -236,7 +237,7 @@ body {
       "articulo"
       "listas";
     grid-template-columns: 1fr;
-    padding: 0 1rem; /* Agrega margen lateral pequeño */
+    padding: 0 1rem;
   }
   .contenido__listas {
     flex-direction: column;
@@ -253,7 +254,7 @@ body {
       "articulo"
       "listas";
     grid-template-columns: 1fr;
-    padding: 0 0.5rem; /* Reduce aún más el margen lateral */
+    padding: 0 0.5rem; 
   }
   .contenido__listas {
     flex-direction: column;
@@ -320,7 +321,7 @@ body {
 	padding: 0.5rem 0;
 }
 
-/* Responsive */
+/* AJUSTES ADICIONAL DE MQ */
 @media (max-width: 768px) {
 	.servicios-grid {
 		flex-direction: column;
@@ -381,7 +382,7 @@ body {
 	padding-left: 1.5rem;
 }
 
-/* Responsive Design */
+/* AJUSTES ADICIONALES DE MQ */
 @media (max-width: 768px) {
 	.sobre-nosotros-habilidades {
 		flex-direction: column;
