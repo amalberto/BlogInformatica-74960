@@ -191,7 +191,8 @@ img {
   background-color: #2980b9;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
@@ -208,11 +209,14 @@ body {
   padding: 0;
 }
 
-/* NAVBAR  */
+/* NAVBAR */
 .navbar {
   width: 100%;
+  background-color: #212529 !important;
+  color: white;
 }
-.navbar .navbar-toggler {
+
+.navbar-toggler {
   margin-left: auto !important;
 }
 
@@ -222,13 +226,14 @@ body {
   padding: 0;
 }
 
-/* BANNER / CAROUSEL */
+/* BANNER */
 .pagina__banner {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
 }
+
 .pagina__banner img {
   width: 60%;
   max-height: 400px;
@@ -236,38 +241,45 @@ body {
   border-radius: 8px;
 }
 
-/* Ocultar carousel en móvil */
 @media (max-width: 767px) {
   .pagina__banner {
     display: none !important;
   }
 }
-/* CONTENIDO PRINCIPAL */
+/* SECCIÓN PRINCIPAL */
 .pagina__contenido {
-  grid-area: contenido;
-  display: grid;
-  grid-template-areas: "principal lateral" "articulo articulo" "listas listas";
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  justify-content: space-between;
   gap: 1.5rem;
-  max-width: 100% !important;
-  width: 100% !important;
+  flex-wrap: wrap;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
-  box-sizing: border-box;
 }
 
-/* Contenedor General */
-.container {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0;
-  padding: 0 1rem;
+.pagina__contenido > * {
+  flex: 1;
+  min-width: 30%;
+  max-width: 33%;
 }
 
+@media (max-width: 767px) {
+  .pagina__contenido {
+    flex-direction: column;
+  }
+  .pagina__contenido > * {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+/* CONTENIDO */
 .contenido__principal,
 .contenido__lateral,
 .contenido__articulo,
-.contenido__listas div {
+.contenido__listas div,
+.servicios-contenedor div,
+.habilidad,
+.sobre-nosotros-contenedor section {
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -276,67 +288,62 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Estilos en Mobile */
-@media (max-width: 767px) {
-  .pagina__contenido {
-    grid-template-areas: "principal" "lateral" "articulo" "listas";
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-  /* Ajuste del Navbar en Mobile */
-  .navbar {
-    padding: 0.5rem 1rem;
-  }
-  .navbar-toggler {
-    margin-left: auto !important;
-  }
-  .pagina__encabezado {
-    padding: 0.5rem;
-  }
-}
 /* FOOTER */
 .pagina__pie {
-  grid-area: pie;
-  background-color: #2c3e50;
-  color: #fff;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  padding: 1rem;
   flex-wrap: wrap;
-  width: 100% !important;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #212529;
+  color: #ffffff;
+  padding: 1.5rem;
+  width: 100%;
+  text-align: center;
 }
 
-/* Asegurar que no haya margen derecho inesperado */
-* {
-  box-sizing: border-box;
+.pagina__pie div {
+  flex: 1;
+  min-width: 25%;
+  text-align: center;
+  padding: 0.5rem;
 }
 
-/* === Estilos de listas === */
-ul {
-  list-style-type: disc;
+@media (max-width: 767px) {
+  .pagina__pie {
+    flex-direction: column;
+  }
+  .pagina__pie div {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* LISTAS */
+ul,
+ol {
   margin: 1rem 0;
   padding-left: 1.5rem;
+}
+
+ul {
+  list-style-type: disc;
 }
 
 ol {
   list-style-type: decimal;
-  margin: 1rem 0;
-  padding-left: 1.5rem;
 }
 
-/* Estilos de enlaces */
+/* ENLACES */
 a {
   color: #f7f9fa;
   text-decoration: none;
   font-weight: 400;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
-/* Títulos */
+/* TÍTULOS */
 h1,
 h2,
 h3 {
@@ -344,11 +351,6 @@ h3 {
   margin: 1rem 0;
   line-height: 1.2;
   color: #333;
-}
-h1:hover,
-h2:hover,
-h3:hover {
-  text-decoration: underline;
 }
 
 h1 {
@@ -363,27 +365,76 @@ h3 {
   font-size: 1.25rem;
 }
 
-/* Párrafos */
+/* PÁRRAFOS */
 p {
   margin: 0.75rem 0;
   font-size: 1rem;
 }
 
 /* FORMULARIO */
+.formulario-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.formulario-grid input,
+.formulario-grid textarea,
+.formulario-grid button {
+  width: 100%;
+}
+
 .formulario-grid button {
   padding: 0.8rem 2rem;
-  background-color: #19242F;
+  background-color: #212529;
   color: #ffffff;
-  border: 1px solid #101820;
+  border: 1px solid #212529;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
   transition: background 0.3s ease-in-out;
 }
+
 .formulario-grid button:hover {
   background-color: #101820 !important;
 }
 
+/* SOBRE NOSOTROS */
+.sobre-nosotros-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.sobre-nosotros-habilidades {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .sobre-nosotros-habilidades {
+    flex-direction: column;
+  }
+}
+/* SERVICIOS */
+@media (min-width: 768px) {
+  .servicios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .servicios-contenedor {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (max-width: 1023px) and (min-width: 768px) {
   .pagina__contenido {
     grid-template-areas: "principal" "lateral" "articulo" "listas";
