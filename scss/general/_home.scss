@@ -1,3 +1,10 @@
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* BODY */
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -6,124 +13,130 @@ body {
   color: $color-texto;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+}
 
-  /* Carousel */
-  .carousel-item {
-    text-align: center;
-
-    img {
-      width: 50%;
-      height: auto;
-      max-height: 500px;
-      object-fit: cover;
-    }
+/* NAVBAR  */
+.navbar {
+  width: 100%;
+  
+  .navbar-toggler {
+    margin-left: auto !important; 
   }
 }
 
+/* HEADER */
+.pagina__encabezado {
+  width: 100%;
+  padding: 0;
+}
+
+/* BANNER / CAROUSEL */
+.pagina__banner {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  img {
+    width: 60%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+/* Ocultar carousel en móvil */
 @media (max-width: 767px) {
-  .carousel-item {
+  .pagina__banner {
     display: none !important;
   }
 }
 
-/* ===== GRID PRINCIPAL / ESTRUCTURA BASE ===== */
-.pagina {
+/* CONTENIDO PRINCIPAL */
+.pagina__contenido {
+  grid-area: contenido;
   display: grid;
   grid-template-areas:
-    "encabezado"
-    "banner"
-    "contenido"
-    "pie";
-  grid-template-rows: auto auto 1fr auto;
+    "principal lateral"
+    "articulo articulo"
+    "listas listas";
+  grid-template-columns: 2fr 1fr;
   gap: 1.5rem;
-  min-height: 100vh;
-
-  &__encabezado {
-    grid-area: encabezado;
-  }
-
-  &__banner {
-    grid-area: banner;
-  }
-
-  /* 
-    ===== Contenido principal ===== */
-  &__contenido {
-    grid-area: contenido;
-    display: grid;
-    grid-template-areas:
-      "principal lateral"
-      "articulo articulo"
-      "listas listas";
-    grid-template-columns: 2fr 1fr;
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-
-  @media (max-width: 767px) {
-    &__contenido {
-      grid-template-areas:
-        "principal"
-        "lateral"
-        "articulo"
-        "listas";
-      grid-template-columns: 1fr;
-    }
-  }
-
-  &__pie {
-    grid-area: pie;
-    background-color: $color-footer;
-    color: $color-blanco;
-    @include flex-center(space-around, center, row);
-    padding: 1rem;
-    flex-wrap: wrap;
-
-  
-    @media (max-width: 767px) {
-      flex-direction: column;
-      text-align: center;
-      justify-content: center; 
-    }
-  }
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
-/* ===== CONTENIDO PRINCIPAL ===== */
+/* Contenedor General */
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+
 .contenido__principal,
+.contenido__lateral,
 .contenido__articulo,
 .contenido__listas div {
-  @extend %card-base;
-  margin-bottom: 1rem;
+  background-color: #ffffff; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  padding: 1.5rem; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 1rem; 
 }
 
-/* Lateral */
-.contenido__lateral {
-  background: $color-fondo-lateral;
-  padding: 1rem 1.5rem;
-  border-radius: $radius-base;
-  @include box-shadow();
-}
-
-/* Listas */
-.contenido__listas {
-  grid-area: listas;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-
-  div {
-    flex: 1;
+/* Estilos en Mobile */
+@media (max-width: 767px) {
+  .pagina__contenido {
+    grid-template-areas:
+      "principal"
+      "lateral"
+      "articulo"
+      "listas";
+    grid-template-columns: 1fr;
+    padding: 1rem;
   }
+
+  /* Ajuste del Navbar en Mobile */
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-toggler {
+    margin-left: auto !important;
+  }
+
+  .pagina__encabezado {
+    padding: 0.5rem;
+  }
+}
+
+/* FOOTER */
+.pagina__pie {
+  grid-area: pie;
+  background-color: $color-footer;
+  color: $color-blanco;
+  @include flex-center(space-around, center, row);
+  padding: 1rem;
+  flex-wrap: wrap;
+  width: 100% !important;
+}
+
+/* Asegurar que no haya margen derecho inesperado */
+* {
+  box-sizing: border-box;
 }
 
 /* === Estilos de listas === */
 ul {
-  list-style-type: disc;       
+  list-style-type: disc;
   margin: 1rem 0;
-  padding-left: 1.5rem;        
+  padding-left: 1.5rem;
 }
 
 ol {
@@ -173,4 +186,20 @@ h3 {
 p {
   margin: 0.75rem 0;
   font-size: 1rem;
+}
+
+/* FORMULARIO */
+.formulario-grid button {
+  padding: 0.8rem 2rem;
+  background-color: #19242F; 
+  color: #ffffff;
+  border: 1px solid #101820; 
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #101820 !important; 
+  }
 }
