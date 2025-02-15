@@ -1,0 +1,47 @@
+/* === MIXIN PARA BOX-SHADOW === */
+@mixin box-shadow($x: 0,
+    $y: 2px,
+    $blur: 4px,
+    $spread: 0,
+    $color: rgba(0, 0, 0, 0.1)) {
+    box-shadow: #{$x} #{$y} #{$blur} #{$spread} #{$color};
+}
+
+/* === MIXIN PARA BREAKPOINTS === 
+*/
+@mixin respond-to($device) {
+    @if $device =='desktop' {
+        @media (min-width: 1024px) {
+            @content;
+        }
+    }
+
+    @else if $device =='tablet' {
+        @media (max-width: 1023px) and (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $device =='mobile' {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+}
+
+/* === MIXIN PARA FLEX-CENTER */
+@mixin flex-center($justify: center, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+/* === PLACEHOLDER PARA @EXTEND === 
+*/
+%card-base {
+    background-color: $color-blanco;
+    border-radius: $radius-base;
+    padding: 1rem 1.5rem;
+    @include box-shadow();
+}
