@@ -56,6 +56,8 @@ body {
   }
 }
 
+
+
 /* SECCIÓN PRINCIPAL */
 .pagina__contenido {
   display: flex;
@@ -128,6 +130,20 @@ body {
     text-align: center;
   }
 }
+
+
+/* AJUSTES DE FOOTER PARA BLOG.HTML QUE UTILIZA BOOTSTRAP*/
+.pagina__pie_blog a {
+  text-decoration: none !important; /* Elimina cualquier subrayado inicial */
+  color: #ffffff; /* Asegura que el color sea blanco */
+  transition: text-decoration 0.3s ease-in-out; /* Efecto suave */
+}
+
+.pagina__pie_blog a:hover {
+  text-decoration: underline !important; /* Agrega el subrayado en hover */
+}
+
+
 
 /* LISTAS */
 ul,
