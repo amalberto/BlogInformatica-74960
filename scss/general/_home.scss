@@ -99,7 +99,7 @@ body {
   padding: 1.5rem;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; // Animación suave
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.05); 
@@ -123,6 +123,34 @@ body {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
   }
 }
+
+.contenedor {
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  
+  @media (max-width: 1200px) {
+    max-width: 960px;
+  }
+
+  @media (max-width: 992px) {
+    max-width: 720px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 540px;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 
 /* FOOTER */
 .pagina__pie {
@@ -154,15 +182,15 @@ body {
 }
 
 
-/* AJUSTES DE FOOTER PARA BLOG.HTML QUE UTILIZA BOOTSTRAP*/
+
 .pagina__pie_blog a {
-  text-decoration: none !important; /* Elimina cualquier subrayado inicial */
-  color: #ffffff; /* Asegura que el color sea blanco */
-  transition: text-decoration 0.3s ease-in-out; /* Efecto suave */
+  text-decoration: none !important; 
+  color: #ffffff; 
+  transition: text-decoration 0.3s ease-in-out; 
 }
 
 .pagina__pie_blog a:hover {
-  text-decoration: underline !important; /* Agrega el subrayado en hover */
+  text-decoration: underline !important; 
 }
 
 
