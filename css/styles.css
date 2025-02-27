@@ -276,7 +276,6 @@ body {
 }
 /* CONTENIDO */
 .contenido__principal,
-.contenido__lateral,
 .contenido__articulo,
 .contenido__listas div,
 .servicios-contenedor div,
@@ -288,6 +287,31 @@ body {
   padding: 1.5rem;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.contenido__principal:hover,
+.contenido__articulo:hover,
+.contenido__listas div:hover,
+.servicios-contenedor div:hover,
+.habilidad:hover,
+.sobre-nosotros-contenedor section:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contenido__lateral {
+  background-color: #ccddff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+.contenido__lateral:hover {
+  background-color: #d0ddf8;
+  transform: scale(1.1);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* FOOTER */
