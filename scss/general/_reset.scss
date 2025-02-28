@@ -1,6 +1,4 @@
-/* 
-   RESET BÁSICO DE ESTILOS! */
-
+/* RESET BÁSICO DE ESTILOS */
 html,
 body,
 div,
@@ -89,7 +87,6 @@ video {
     vertical-align: baseline;
 }
 
-// APLICA DISPLAY BLOCK A LOS ELEMENTOS PARA MEJORAR LA ACCESIBILIDAD DEL CONTENIDO
 article,
 aside,
 details,
@@ -105,13 +102,11 @@ section {
     display: block;
 }
 
-// AJUSTE DE TAMAÑO BASE DE FUENTES
 html {
     font-size: 100%;
     box-sizing: border-box;
 }
 
-// APLICACIÓN DE BOX-SIZING
 *,
 *::before,
 *::after {
@@ -120,39 +115,14 @@ html {
 
 body {
     line-height: 1;
-    background: #ffffff;
+    background: $color-blanco;
 }
 
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote::before,
-blockquote::after,
-q::before,
-q::after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-// AJUSTE PARA ELIMINAR SUBRAYADO POR DEFCECTO
 a {
     text-decoration: none;
     color: inherit;
 }
 
-// AJUSTE DE IMAGENES DENTRO DE CONTENEDORES
 img {
     max-width: 100%;
     height: auto;

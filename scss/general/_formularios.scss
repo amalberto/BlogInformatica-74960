@@ -1,0 +1,53 @@
+.formulario-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.formulario-grid input,
+.formulario-grid textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid $color-borde-input;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+// Mensaje ocupa todo el ancho
+.formulario-grid .mensaje {
+    width: 100%;
+}
+
+// Botón de enviar (dark theme)
+.formulario-grid .boton {
+    display: flex;
+    justify-content: flex-end; // Alinea a la derecha en pantallas grandes
+    width: 100%;
+
+    button {
+        padding: 0.8rem 2rem;
+        background-color: $color-footer; // Oscuro como Bootstrap
+        color: $color-blanco;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.3s ease-in-out;
+
+        &:hover {
+            background-color: lighten($color-footer, 10%);
+        }
+    }
+}
+
+// Ajuste en móviles: el botón ocupa todo el ancho
+@media (max-width: 767px) {
+    .formulario-grid .boton {
+        justify-content: center;
+
+        button {
+            width: 100%;
+        }
+    }
+}

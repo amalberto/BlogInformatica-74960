@@ -1,35 +1,30 @@
 /* === MIXIN PARA BOX-SHADOW === */
-@mixin box-shadow($x: 0,
-    $y: 2px,
-    $blur: 4px,
-    $spread: 0,
-    $color: rgba(0, 0, 0, 0.1)) {
+@mixin box-shadow($x: 0, $y: 2px, $blur: 4px, $spread: 0, $color: rgba(0, 0, 0, 0.1)) {
     box-shadow: #{$x} #{$y} #{$blur} #{$spread} #{$color};
 }
 
-/* === MIXIN PARA BREAKPOINTS === 
-*/
+/* === MIXIN PARA BREAKPOINTS === */
 @mixin respond-to($device) {
     @if $device =='desktop' {
-        @media (min-width: 1024px) {
+        @media (min-width: $bp-desktop) {
             @content;
         }
     }
 
     @else if $device =='tablet' {
-        @media (max-width: 1023px) and (min-width: 768px) {
+        @media (max-width: $bp-desktop) and (min-width: $bp-tablet) {
             @content;
         }
     }
 
     @else if $device =='mobile' {
-        @media (max-width: 767px) {
+        @media (max-width: $bp-tablet) {
             @content;
         }
     }
 }
 
-/* === MIXIN PARA FLEX-CENTER */
+/* === MIXIN PARA FLEX-CENTER === */
 @mixin flex-center($justify: center, $align: center, $direction: row) {
     display: flex;
     justify-content: $justify;
@@ -37,8 +32,7 @@
     flex-direction: $direction;
 }
 
-/* === PLACEHOLDER PARA @EXTEND === 
-*/
+/* === PLACEHOLDER PARA @EXTEND === */
 %card-base {
     background-color: $color-blanco;
     border-radius: $radius-base;

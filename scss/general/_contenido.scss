@@ -1,0 +1,91 @@
+/* === CARRUSEL / BANNER === */
+.pagina__banner {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem 0; 
+
+    img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: $radius-base;
+    }
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.pagina__contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem; 
+
+    &>* {
+        flex: 1;
+        min-width: 30%;
+        max-width: 33%;
+    }
+}
+
+/* === SECCIONES PRINCIPALES === */
+.contenido__principal,
+.contenido__articulo,
+.contenido__listas div,
+.servicios-contenedor div,
+.habilidad,
+.sobre-nosotros-contenedor section {
+    background-color: $color-blanco;
+    border: 1px solid #ddd;
+    border-radius: $radius-base;
+    padding: 2rem; 
+    @include box-shadow(0, 4px, 6px, 0, rgba(0, 0, 0, 0.1));
+    margin-bottom: 1.5rem; 
+    transition: transform 0.5s ease-in-out, box-shadow 0.35s ease-in-out;
+
+    &:hover {
+        transform: scale(1.03);
+        @include box-shadow(0, 6px, 12px, 0, rgba(0, 0, 0, 0.2));
+    }
+}
+
+/* === BARRA LATERAL === */
+.contenido__lateral {
+    background-color: $color-fondo-lateral;
+    border: 1px solid #ddd;
+    border-radius: $radius-base;
+    padding: 2rem; 
+    @include box-shadow(0, 4px, 6px, 0, rgba(0, 0, 0, 0.1));
+    margin-bottom: 1.5rem;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+
+    &:hover {
+        background-color: lighten($color-fondo-lateral, 5%);
+        transform: scale(1.03);
+        @include box-shadow(0, 6px, 12px, 0, rgba(0, 0, 0, 0.3));
+    }
+}
+
+/* === CONTENEDOR GENERAL === */
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+
+    @include respond-to(desktop) {
+        max-width: 960px;
+    }
+
+    @include respond-to(tablet) {
+        max-width: 720px;
+    }
+
+    @include respond-to(mobile) {
+        max-width: 100%;
+        padding: 1rem;
+    }
+}

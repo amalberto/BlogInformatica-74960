@@ -1,0 +1,70 @@
+/* === MEDIA QUERIES === */
+
+@include respond-to(tablet) {
+    .pagina__contenido {
+        grid-template-areas:
+            "principal"
+            "lateral"
+            "articulo"
+            "listas";
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .contenido__listas {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contenedor {
+        max-width: 720px;
+    }
+}
+
+
+@include respond-to(desktop) {
+    .pagina__contenido {
+        grid-template-areas:
+            "principal lateral"
+            "articulo articulo"
+            "listas listas";
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .contenido__listas {
+        flex-direction: row;
+    }
+
+    .contenedor {
+        max-width: 960px;
+    }
+}
+
+
+@include respond-to(mobile) {
+    .pagina__contenido {
+        flex-direction: column;
+    }
+
+    .pagina__contenido > * {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .pagina__pie,
+    .pagina__pie_blog {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .pagina__pie div,
+    .pagina__pie_blog div {
+        width: 100%;
+        text-align: center;
+    }
+}

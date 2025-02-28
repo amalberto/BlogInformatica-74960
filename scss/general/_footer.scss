@@ -1,0 +1,42 @@
+// FOOTER
+
+.pagina__pie {
+    width: 100%;
+    background-color: $color-footer;
+    color: $color-blanco;
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    div {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    a {
+        color: $color-blanco !important;
+        text-decoration: none !important;
+        font-weight: 400;
+        transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+
+        &:hover {
+            text-decoration: underline !important;
+            color: lighten($color-blanco, 20%) !important;
+        }
+    }
+}
+
+.pagina__pie_blog a {
+    text-decoration: none !important;
+    color: $color-blanco !important;
+    transition: text-decoration 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+        text-decoration: underline !important;
+        color: lighten($color-blanco, 20%) !important;
+    }
+}

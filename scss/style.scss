@@ -1,11 +1,16 @@
-@import "general/reset";
+// 🔹 1. Estilos base y utilidades
 @import "utilidades/variables";
 @import "utilidades/mixins";
-@import "general/contacto";
+@import "general/reset";
 
-// Estilos base/global
-@import "general/home";
 
-// Media queries
-@import "general/mq-tablet";
-@import "general/mq-desktop";
+// 🔹 2. Componentes y estructura general
+@import "general/layout";
+@import "general/header";
+@import "general/footer";
+@import "general/contenido";
+@import "general/textos";
+@import "general/formularios";  
+
+// 🔹 3. Media queries
+@import "general/mq";
