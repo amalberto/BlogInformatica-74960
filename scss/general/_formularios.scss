@@ -14,20 +14,20 @@
     font-size: 1rem;
 }
 
-// Mensaje ocupa todo el ancho
+
 .formulario-grid .mensaje {
     width: 100%;
 }
 
-// Botón de enviar (dark theme)
+
 .formulario-grid .boton {
     display: flex;
-    justify-content: flex-end; // Alinea a la derecha en pantallas grandes
+    justify-content: flex-end;
     width: 100%;
 
     button {
         padding: 0.8rem 2rem;
-        background-color: $color-footer; // Oscuro como Bootstrap
+        background-color: $color-footer;
         color: $color-blanco;
         border: none;
         border-radius: 5px;
@@ -41,7 +41,7 @@
     }
 }
 
-// Ajuste en móviles: el botón ocupa todo el ancho
+
 @media (max-width: 767px) {
     .formulario-grid .boton {
         justify-content: center;

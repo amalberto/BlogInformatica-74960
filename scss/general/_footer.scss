@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: auto; // Empuja el footer al final si el contenido es corto
+    margin-top: auto;
 
     div {
         text-align: center;
@@ -40,8 +40,9 @@
     }
 }
 
-// Asegurar que el contenido principal ocupe toda la pantalla
-html, body {
+
+html,
+body {
     height: 100%;
     margin: 0;
     display: flex;
@@ -49,7 +50,7 @@ html, body {
 }
 
 main {
-    flex-grow: 1;  // Empuja el contenido hacia arriba y deja el footer en la parte inferior
+    flex-grow: 1;
 }
 
 footer {
