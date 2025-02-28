@@ -216,11 +216,11 @@ body {
   color: #fff;
   padding: 1rem;
   text-align: center;
-  margin-top: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin-top: auto;
 }
 .pagina__pie div {
   text-align: center;
@@ -245,6 +245,21 @@ body {
 .pagina__pie_blog a:hover {
   text-decoration: underline !important;
   color: white !important;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  width: 100%;
 }
 
 /* === CARRUSEL / BANNER === */
@@ -492,7 +507,6 @@ a:hover {
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;
-    position: absolute;
     bottom: 0;
     width: 100%;
   }
@@ -503,4 +517,4 @@ a:hover {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=style.css.map */
