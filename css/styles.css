@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /* MODO NOCTURNO  */
-/* === MIXIN PARA BOX-SHADOW === */
-/* === MIXIN PARA BREAKPOINTS === */
-/* === MIXIN PARA FLEX-CENTER === */
-/* === PLACEHOLDER PARA @EXTEND === */
+/* MIXIN PARA BOX-SHADOW */
+/*  MIXIN PARA BREAKPOINTS  */
+/* MIXIN PARA FLEX-CENTER */
+/*  PLACEHOLDER PARA @EXTEND  */
 /* RESET DE ESTILOS */
 html,
 body,
@@ -393,7 +393,7 @@ body {
   }
 }
 
-/* === SECCIÓN PRINCIPAL === */
+/*  SECCIÓN PRINCIPAL  */
 .pagina__contenido {
   flex: 1;
   display: flex;
@@ -644,7 +644,6 @@ footer {
   margin: 0 auto;
 }
 
-/* Estilos para las tarjetas de Últimas Publicaciones */
 .ultimas-publicaciones .card {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out I !important;
 }
@@ -653,7 +652,7 @@ footer {
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* === TIPOGRAFÍA GENERAL === */
+/* TIPOGRAFÍA GENERAL  */
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -661,7 +660,7 @@ body {
   line-height: 1.6;
 }
 
-/* === TÍTULOS === */
+/*  TÍTULOS  */
 h1,
 h2,
 h3 {
@@ -715,7 +714,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* === ESTILOS PERSONALIZADOS PARA FORMULARIOS === */
+/* ESTILOS PERSONALIZADOS PARA FORMULARIOS */
 .formulario-personalizado {
   display: flex;
   flex-direction: column;
@@ -726,7 +725,6 @@ a:hover {
   margin: 0 auto;
 }
 
-/* Campos de texto */
 .campo-texto {
   width: 100%;
   padding: 0.8rem;
@@ -749,7 +747,6 @@ a:hover {
   justify-content: center;
 }
 
-/* Botón de envío */
 .boton-enviar {
   padding: 0.8rem 2rem;
   background-color: #212529;
@@ -764,7 +761,7 @@ a:hover {
   background-color: #444;
 }
 
-/* === MEDIA QUERIES === */
+/*  MEDIA QUERIES */
 @media (max-width: 1024px) and (min-width: 768px) {
   .pagina__contenido {
     grid-template-areas: "principal" "lateral" "articulo" "listas";

@@ -1,4 +1,5 @@
-/* === ESTILOS PERSONALIZADOS PARA FORMULARIOS === */
+/* ESTILOS PERSONALIZADOS PARA FORMULARIOS */
+
 .formulario-personalizado {
     display: flex;
     flex-direction: column;
@@ -9,7 +10,6 @@
     margin: 0 auto;
 }
 
-/* Campos de texto */
 .campo-texto {
     width: 100%;
     padding: 0.8rem;
@@ -32,7 +32,7 @@
     text-align: center;
     justify-content: center; 
 }
-/* Botón de envío */
+
 .boton-enviar {
     padding: 0.8rem 2rem;
     background-color: $color-boton;
