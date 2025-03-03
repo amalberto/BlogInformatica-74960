@@ -1,70 +1,49 @@
-/* ESTILOS PARA FORMULARIO */
-
-.formulario-grid {
+/* === ESTILOS PERSONALIZADOS PARA FORMULARIOS === */
+.formulario-personalizado {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
+    max-width: 600px;
     text-align: left;
+    margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-    .formulario-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.formulario-grid input,
-.formulario-grid textarea {
+/* Campos de texto */
+.campo-texto {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid $color-borde-input;
     border-radius: 5px;
     font-size: 1rem;
+    background-color: $color-blanco;
+    color: $color-texto;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:focus {
+        border-color: $color-primario;
+        box-shadow: 0 0 5px rgba($color-primario, 0.5);
+        outline: none;
+    }
 }
 
-.formulario-grid .mensaje {
-    grid-column: 1 / -1;
-    width: 100%;
-}
-
-.formulario-grid .boton {
-    grid-column: 1 / -1;
+.boton {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    text-align: center;
+    justify-content: center; 
 }
-
-@media (max-width: 767px) {
-    .formulario-grid .boton {
-        justify-content: center;
-    }
-
-    .formulario-grid .boton button {
-        width: 100%;
-    }
-}
-
-.formulario-grid button {
+/* Botón de envío */
+.boton-enviar {
     padding: 0.8rem 2rem;
-    background-color: $color-primario;
+    background-color: $color-boton;
     color: $color-blanco;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
     transition: background 0.3s ease-in-out;
-}
 
-.formulario-grid .boton button {
-    background-color: $color-footer;
-}
-
-.formulario-grid button:hover {
-    background-color: $color-primario-hover;
-}
-
-.formulario-grid .boton button:hover {
-    background-color: lighten($color-footer, 10%);
+    &:hover {
+        background-color: $color-boton-hover;
+    }
 }

@@ -236,19 +236,19 @@ body:has(#modoNocturnoCheckbox:checked) .btn-dark {
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-body:has(#modoNocturnoCheckbox:checked) .btn-dark:hover {
+body:has(#modoNocturnoCheckbox:checked) .botn-dark:hover {
   background-color: #ddd;
   color: #000;
 }
 
-body:has(#modoNocturnoCheckbox:checked).contacto .btn-enviar {
+body:has(#modoNocturnoCheckbox:checked).contacto .boton-enviar {
   background-color: #fff;
   color: #222;
   border: 1px solid #ccc;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-body:has(#modoNocturnoCheckbox:checked).contacto .btn-enviar:hover {
+body:has(#modoNocturnoCheckbox:checked).contacto .boton-enviar:hover {
   background-color: #ddd;
   color: #000;
 }
@@ -644,6 +644,15 @@ footer {
   margin: 0 auto;
 }
 
+/* Estilos para las tarjetas de Últimas Publicaciones */
+.ultimas-publicaciones .card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out I !important;
+}
+.ultimas-publicaciones .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
 /* === TIPOGRAFÍA GENERAL === */
 body {
   font-family: "Roboto", sans-serif;
@@ -706,53 +715,44 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ESTILOS PARA FORMULARIO */
-.formulario-grid {
+/* === ESTILOS PERSONALIZADOS PARA FORMULARIOS === */
+.formulario-personalizado {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
+  max-width: 600px;
   text-align: left;
+  margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .formulario-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.formulario-grid input,
-.formulario-grid textarea {
+/* Campos de texto */
+.campo-texto {
   width: 100%;
   padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.campo-texto:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  outline: none;
 }
 
-.formulario-grid .mensaje {
-  grid-column: 1/-1;
-  width: 100%;
-}
-
-.formulario-grid .boton {
-  grid-column: 1/-1;
+.boton {
   display: flex;
+  text-align: center;
   justify-content: center;
-  width: 100%;
 }
 
-@media (max-width: 767px) {
-  .formulario-grid .boton {
-    justify-content: center;
-  }
-  .formulario-grid .boton button {
-    width: 100%;
-  }
-}
-.formulario-grid button {
+/* Botón de envío */
+.boton-enviar {
   padding: 0.8rem 2rem;
-  background-color: #3498db;
+  background-color: #212529;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -760,17 +760,8 @@ a:hover {
   font-size: 1rem;
   transition: background 0.3s ease-in-out;
 }
-
-.formulario-grid .boton button {
-  background-color: #212529;
-}
-
-.formulario-grid button:hover {
-  background-color: #2980b9;
-}
-
-.formulario-grid .boton button:hover {
-  background-color: rgb(55.7432432432, 62.5, 69.2567567568);
+.boton-enviar:hover {
+  background-color: #444;
 }
 
 /* === MEDIA QUERIES === */

@@ -119,3 +119,13 @@
     }
 
 }
+
+/* Estilos para las tarjetas de Últimas Publicaciones */
+.ultimas-publicaciones .card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out I !important;
+
+    &:hover {
+        transform: scale(1.03);
+        @include box-shadow(0, 6px, 12px, 0, rgba(0, 0, 0, 0.2));
+    }
+}

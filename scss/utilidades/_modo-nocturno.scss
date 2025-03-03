@@ -55,20 +55,20 @@ body:has(#modoNocturnoCheckbox:checked) .btn-dark {
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-body:has(#modoNocturnoCheckbox:checked) .btn-dark:hover {
+body:has(#modoNocturnoCheckbox:checked) .botn-dark:hover {
     background-color: #ddd;
     color: #000;
 }
 
 
-body:has(#modoNocturnoCheckbox:checked).contacto .btn-enviar {
+body:has(#modoNocturnoCheckbox:checked).contacto .boton-enviar {
     background-color: #fff;
     color: #222;
     border: 1px solid #ccc;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-body:has(#modoNocturnoCheckbox:checked).contacto .btn-enviar:hover {
+body:has(#modoNocturnoCheckbox:checked).contacto .boton-enviar:hover {
     background-color: #ddd;
     color: #000;
 }
