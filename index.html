@@ -2,37 +2,81 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
   <meta name="description"
-    content="Soluciones Informáticas: Servicios IT integrados con inteligencia artificial para potenciar tu negocio." />
-  <meta name="keywords" content="tecnología, servicios IT, inteligencia artificial, desarrollo web, soporte técnico" />
-  <meta name="author" content="Soluciones Informáticas" />
-  <title>Soluciones Informáticas - Inicio</title>
+    content="Explora las últimas tendencias en tecnología, inteligencia artificial y servicios IT. Noticias, análisis y consejos para potenciar tu negocio.">
+  <meta name="keywords"
+    content="blog tecnología, inteligencia artificial, desarrollo web, UX/UI, optimización web, tendencias IT">
+  <meta name="author" content="Soluciones Informáticas">
+  <meta name="robots" content="index, follow">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Blog de Tecnología - Soluciones Informáticas">
+  <meta property="og:description"
+    content="Descubre las últimas noticias sobre inteligencia artificial, desarrollo web y soluciones IT innovadoras.">
+  <meta property="og:image" content="https://amalberto.github.io/BlogInformatica-74960/img/carrousel3.jpg">
+  <meta property="og:url" content="https://amalberto.github.io/BlogInformatica-74960/blog.html">
+  <meta property="og:type" content="article">
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog de Tecnología - Soluciones Informáticas">
+  <meta name="twitter:description"
+    content="Noticias, tendencias y análisis sobre inteligencia artificial, desarrollo web y UX/UI.">
+  <meta name="twitter:image" content="https://amalberto.github.io/BlogInformatica-74960/img/banner_final.jpg">
+
+  <!-- FAVICON -->
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+  <title>Inicio - Soluciones Informáticas</title>
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="pagina">
+
+  <!-- Toggler de modo nocturno -->
+  <input type="checkbox" id="modoNocturnoCheckbox">
+  <label for="modoNocturnoCheckbox" class="modo-nocturno-toggle">
+    <span class="slider"></span>
+  </label>
+
   <!-- HEADER -->
   <header class="pagina__encabezado">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
       <div class="container">
-        <a class="navbar-brand" href="#">Soluciones Informáticas</a>
+        <a class="navbar-brand" href="../index.html">
+          <img src="img/logo.png" alt="Logo">
+          Soluciones Informáticas
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="html/contacto.html">Contacto</a></li>
-            <li class="nav-item"><a class="nav-link" href="html/sobre-nosotros.html">Sobre Nosotros</a></li>
-            <li class="nav-item"><a class="nav-link" href="html/servicios.html">Servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="html/blog.html">Blog</a></li>
+          <ul class="navbar-nav ms-auto gap-2">
+            <li class="nav-item">
+              <a class="nav-link active" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html/contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html/sobre-nosotros.html">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html/servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html/blog.html">Blog</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -75,7 +119,7 @@
   <main class="pagina__contenido">
     <!-- Sección Principal -->
     <section class="contenido__principal">
-      <h2>Soluciones IT con Inteligencia Artificial</h2>
+      <h1>Soluciones IT con Inteligencia Artificial</h1>
       <p>
         Potencia tu negocio con nuestras soluciones integrales en IT y tecnologías de inteligencia artificial.
         Desarrollamos proyectos de
@@ -83,15 +127,7 @@
       </p>
     </section>
 
-    <!-- Noticias -->
-    <aside class="contenido__lateral">
-      <h3>Noticias</h3>
-      <ul>
-        <li>Novedades en inteligencia artificial aplicada a negocios</li>
-        <li>Actualizaciones en ciberseguridad y tecnología</li>
-        <li>Lanzamiento de nuestro asistente virtual inteligente</li>
-      </ul>
-    </aside>
+
 
     <!-- Artículo -->
     <article class="contenido__articulo">
@@ -103,6 +139,16 @@
         digital.
       </p>
     </article>
+
+    <!-- Noticias -->
+    <aside class="contenido__lateral">
+      <h3>Noticias</h3>
+      <ul>
+        <li>Novedades en inteligencia artificial aplicada a negocios</li>
+        <li>Actualizaciones en ciberseguridad y tecnología</li>
+        <li>Lanzamiento de nuestro asistente virtual inteligente</li>
+      </ul>
+    </aside>
 
     <!-- Listas -->
     <div class="contenido__listas">

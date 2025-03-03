@@ -1,0 +1,59 @@
+// FOOTER
+
+.pagina__pie {
+    width: 100%;
+    background-color: $color-footer;
+    color: $color-blanco;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
+
+    div {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    a {
+        color: $color-blanco !important;
+        text-decoration: none !important;
+        font-weight: 400;
+        transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+
+        &:hover {
+            text-decoration: underline !important;
+            color: lighten($color-blanco, 20%);
+        }
+    }
+}
+
+.pagina__pie_blog a {
+    text-decoration: none !important;
+    color: $color-blanco;
+    transition: text-decoration 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+        text-decoration: underline !important;
+        color: lighten($color-blanco, 20%);
+    }
+}
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    width: 100%;
+}

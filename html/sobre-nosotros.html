@@ -4,18 +4,55 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- SEO Meta Tags -->
+	<meta name="description"
+		content="Conoce a Soluciones Informáticas, expertos en tecnología e inteligencia artificial. Impulsamos la transformación digital con soluciones IT innovadoras.">
+	<meta name="keywords"
+		content="sobre nosotros, equipo IT, transformación digital, inteligencia artificial, desarrollo web, soluciones empresariales">
+	<meta name="author" content="Soluciones Informáticas">
+	<meta name="robots" content="index, follow">
+
+	<!-- OPEN GRAPH -->
+	<meta property="og:title" content="Sobre Nosotros - Soluciones Informáticas">
+	<meta property="og:description"
+		content="Somos un equipo de expertos en tecnología y transformación digital. Descubre cómo creamos soluciones IT avanzadas para empresas.">
+	<meta property="og:image" content="https://amalberto.github.io/BlogInformatica-74960/img/carrousel2.jpg">
+	<meta property="og:url" content="https://amalberto.github.io/BlogInformatica-74960/html/sobre-nosotros.html">
+	<meta property="og:type" content="website">
+
+	<!-- TWITTER CARD -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Sobre Nosotros - Soluciones Informáticas">
+	<meta name="twitter:description"
+		content="Descubre quiénes somos y cómo ayudamos a empresas a evolucionar con tecnología avanzada y soluciones IT.">
+	<meta name="twitter:image" content="https://amalberto.github.io/BlogInformatica-74960/img/banner_final.jpg">
+
+	<!-- FAVICON -->
+	<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+
 	<title>Sobre Nosotros - Soluciones Informáticas</title>
+
 	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="../css/styles.css" />
 </head>
 
-<body>
+<body class="pagina sobre-nosotros">
+
+	<!-- Toggler de modo nocturno -->
+	<input type="checkbox" id="modoNocturnoCheckbox">
+	<label for="modoNocturnoCheckbox" class="modo-nocturno-toggle">
+		<span class="slider"></span>
+	</label>
 	<!-- HEADER -->
 	<header class="pagina__encabezado">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
 			<div class="container">
-				<a class="navbar-brand" href="../index.html">Soluciones Informáticas</a>
+				<a class="navbar-brand" href="../index.html">
+					<img src="/img/logo.png" alt="Logo">
+					Soluciones Informáticas
+				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
 					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -78,59 +115,66 @@
 
 	<!-- MAIN -->
 	<main class="sobre-nosotros-contenedor">
-		<section class="sobre-nosotros-intro">
-			<h2>¿Quiénes somos?</h2>
-			<p>
-				En Soluciones Informáticas somos un equipo de profesionales apasionados por la tecnología y la
-				inteligencia artificial. Nos dedicamos a transformar empresas a través de soluciones IT innovadoras y
-				personalizadas.
-			</p>
-		</section>
+		<div class="contenido-sobre-nosotros">
+			<section class="sobre-nosotros-intro">
+				<h2>¿Quiénes somos?</h2>
+				<p>
+					En Soluciones Informáticas somos un equipo de profesionales apasionados por la tecnología y la
+					inteligencia artificial. Nos dedicamos a transformar empresas a través de soluciones IT innovadoras
+					y
+					personalizadas.
+				</p>
+			</section>
 
-		<section class="sobre-nosotros-experiencia">
-			<h2>Nuestra experiencia</h2>
-			<p>
-				Contamos con años de experiencia en el desarrollo de soluciones digitales, desde el diseño web hasta la
-				implementación de sistemas inteligentes que optimizan procesos y potencian el crecimiento empresarial.
-			</p>
-		</section>
+			<section class="sobre-nosotros-experiencia">
+				<h2>Nuestra experiencia</h2>
+				<p>
+					Contamos con años de experiencia en el desarrollo de soluciones digitales, desde el diseño web hasta
+					la
+					implementación de sistemas inteligentes que optimizan procesos y potencian el crecimiento
+					empresarial.
+				</p>
+			</section>
 
-		<section class="sobre-nosotros-habilidades">
-			<div class="habilidad">
-				<h3>Habilidades Técnicas</h3>
-				<ul>
-					<li>Desarrollo Web y Móvil</li>
-					<li>Integración de Inteligencia Artificial</li>
-					<li>Soluciones Cloud y Seguridad Informática</li>
-				</ul>
-			</div>
-			<div class="habilidad">
-				<h3>Habilidades Blandas</h3>
-				<ol>
-					<li>Comunicación efectiva</li>
-					<li>Trabajo en equipo</li>
-					<li>Resolución de problemas</li>
-				</ol>
-			</div>
-		</section>
+			<section class="sobre-nosotros-habilidades">
+				<div class="habilidad">
+					<h3>Habilidades Técnicas</h3>
+					<ul>
+						<li>Desarrollo Web y Móvil</li>
+						<li>Integración de Inteligencia Artificial</li>
+						<li>Soluciones Cloud y Seguridad Informática</li>
+					</ul>
+				</div>
+				<div class="habilidad">
+					<h3>Habilidades Blandas</h3>
+					<ol>
+						<li>Comunicación efectiva</li>
+						<li>Trabajo en equipo</li>
+						<li>Resolución de problemas</li>
+					</ol>
+				</div>
+			</section>
 
-		<section class="sobre-nosotros-objetivo">
-			<h2>Nuestro objetivo</h2>
-			<p>
-				Impulsar la transformación digital de nuestros clientes, implementando soluciones tecnológicas avanzadas
-				que generen valor y mejoren la eficiencia operativa.
-			</p>
-		</section>
+			<section class="sobre-nosotros-objetivo">
+				<h2>Nuestro objetivo</h2>
+				<p>
+					Impulsar la transformación digital de nuestros clientes, implementando soluciones tecnológicas
+					avanzadas
+					que generen valor y mejoren la eficiencia operativa.
+				</p>
+			</section>
+		</div>
 	</main>
+
 
 	<!-- FOOTER -->
 	<footer class="pagina__pie">
 		<div><a href="#">Aviso Legal</a></div>
 		<div><a href="#">Política de Privacidad</a></div>
-		<div><a href="#"">Términos y Condiciones</a></div>
+		<div><a href="#">Términos y Condiciones</a></div>
 		<p>&copy; 2024 Soluciones Informáticas.</p>
 	  </footer>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

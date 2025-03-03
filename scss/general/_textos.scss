@@ -1,0 +1,62 @@
+/* TIPOGRAFÍA GENERAL  */
+body {
+    font-family: $fuente-primaria;
+    font-size: 16px;
+    color: $color-texto;
+    line-height: 1.6;
+}
+
+/*  TÍTULOS  */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    margin: 1rem 0;
+    line-height: 1.2;
+    color: $color-texto;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+/* === PÁRRAFOS === */
+p {
+    margin: 0.75rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* === LISTAS === */
+ul,
+ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+/* === ENLACES === */
+a {
+    color: #f7f9fa;
+    text-decoration: none;
+    font-weight: 400;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,157 @@
+@import "variables";
+
+/* MODO NOCTURNO */
+
+body {
+    background-color: $color-fondo-claro;
+    color: $color-texto-claro;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+#modoNocturnoCheckbox {
+    display: none;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) {
+    background-color: $color-fondo-oscuro;
+    color: $color-texto-oscuro;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) .pagina,
+body:has(#modoNocturnoCheckbox:checked) .pagina__contenido,
+body:has(#modoNocturnoCheckbox:checked) .contenido__principal,
+body:has(#modoNocturnoCheckbox:checked) .contenido__articulo,
+body:has(#modoNocturnoCheckbox:checked) .contenido__lateral,
+body:has(#modoNocturnoCheckbox:checked) .contenido__listas div,
+body:has(#modoNocturnoCheckbox:checked) .pagina__pie {
+    background-color: $color-cajas-oscuro;
+    border: 1px solid $color-borde-oscuro;
+    color: $color-texto-oscuro;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) h1,
+body:has(#modoNocturnoCheckbox:checked) h2,
+body:has(#modoNocturnoCheckbox:checked) h3,
+body:has(#modoNocturnoCheckbox:checked) h4,
+body:has(#modoNocturnoCheckbox:checked) h5,
+body:has(#modoNocturnoCheckbox:checked) h6 {
+    color: $color-titulos-oscuro;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) a {
+    color: lighten($color-texto-oscuro, 20%);
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) .btn-dark {
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #ccc;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .botn-dark:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked).contacto .boton-enviar {
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #ccc;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body:has(#modoNocturnoCheckbox:checked).contacto .boton-enviar:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) .navbar-nav .nav-link {
+    color: #bbb;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) .navbar-nav .nav-link.active {
+    color: #fff;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) .card {
+    background-color: $color-cajas-oscuro;
+    border: 1px solid $color-borde-oscuro;
+    color: $color-texto-oscuro;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) .card-title {
+    color: #fff;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .card-text {
+    color: #ddd !important;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) .sobre-nosotros-contenedor {
+    background-color: $color-cajas-oscuro;
+    border: 1px solid $color-borde-oscuro;
+    color: $color-texto-oscuro;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) .sobre-nosotros-contenedor section {
+    background-color: $color-cajas-oscuro;
+    border: 1px solid $color-borde-oscuro;
+    color: $color-texto-oscuro;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) .habilidad {
+    background-color: $color-cajas-oscuro;
+    color: $color-texto-oscuro;
+    border: 1px solid $color-borde-oscuro;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) .servicios-contenedor {
+    background-color: $color-cajas-oscuro;
+    color: $color-texto-oscuro;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) .servicios-intro {
+    background-color: $color-cajas-oscuro;
+    color: $color-texto-oscuro;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) .servicios-grid .servicio {
+    background-color: $color-cajas-oscuro;
+    border-color: $color-borde-oscuro;
+    color: $color-texto-oscuro;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) .razones {
+    background-color: $color-cajas-oscuro;
+    border-color: $color-borde-oscuro;
+    color: $color-texto-oscuro;
+}
+
+
+body:has(#modoNocturnoCheckbox:checked) .servicios-contenedor h2,
+body:has(#modoNocturnoCheckbox:checked) .servicios-contenedor h3 {
+    color: lighten($color-texto-oscuro, 15%);
+}
+
+body:has(#modoNocturnoCheckbox:checked) .razones ul {
+    color: lighten($color-texto-oscuro, 10%);
+}
