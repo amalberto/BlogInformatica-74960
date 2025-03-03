@@ -1,9 +1,10 @@
 @charset "UTF-8";
+/* MODO NOCTURNO  */
 /* === MIXIN PARA BOX-SHADOW === */
 /* === MIXIN PARA BREAKPOINTS === */
 /* === MIXIN PARA FLEX-CENTER === */
 /* === PLACEHOLDER PARA @EXTEND === */
-/* RESET BÁSICO DE ESTILOS */
+/* RESET DE ESTILOS */
 html,
 body,
 div,
@@ -92,6 +93,43 @@ video {
   vertical-align: baseline;
 }
 
+div:not(.contenido-sobre-nosotros,
+.servicios-intro,
+.servicios-grid,
+.razones,
+.contenido__principal,
+.contenido__articulo,
+.contenido__lateral,
+.contenido__listas div,
+.servicios-contenedor div,
+.habilidad,
+.sobre-nosotros-contenedor section),
+section:not(.contenido-sobre-nosotros,
+.servicios-intro,
+.servicios-grid,
+.razones,
+.contenido__principal,
+.contenido__articulo,
+.contenido__lateral,
+.contenido__listas div,
+.servicios-contenedor div,
+.habilidad,
+.sobre-nosotros-contenedor section),
+article:not(.contenido-sobre-nosotros,
+.servicios-intro,
+.servicios-grid,
+.razones,
+.contenido__principal,
+.contenido__articulo,
+.contenido__lateral,
+.contenido__listas div,
+.servicios-contenedor div,
+.habilidad,
+.sobre-nosotros-contenedor section) {
+  margin: 0;
+  padding: 0;
+}
+
 article,
 aside,
 details,
@@ -134,7 +172,194 @@ img {
   display: block;
 }
 
-/* === CONTENEDORES GENERALES === */
+.contenido-sobre-nosotros,
+.servicios-intro,
+.servicios-grid,
+.razones,
+.contenido__principal,
+.contenido__articulo,
+.contenido__lateral,
+.contenido__listas div,
+.servicios-contenedor div,
+.habilidad,
+.sobre-nosotros-contenedor section {
+  margin: 0.5rem !important;
+  padding: 0.5rem !important;
+}
+
+/* MODO NOCTURNO  */
+/* MODO NOCTURNO */
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#modoNocturnoCheckbox {
+  display: none;
+}
+
+body:has(#modoNocturnoCheckbox:checked) {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .pagina,
+body:has(#modoNocturnoCheckbox:checked) .pagina__contenido,
+body:has(#modoNocturnoCheckbox:checked) .contenido__principal,
+body:has(#modoNocturnoCheckbox:checked) .contenido__articulo,
+body:has(#modoNocturnoCheckbox:checked) .contenido__lateral,
+body:has(#modoNocturnoCheckbox:checked) .contenido__listas div,
+body:has(#modoNocturnoCheckbox:checked) .pagina__pie {
+  background-color: #222;
+  border: 1px solid #444;
+  color: #ffffff;
+}
+
+body:has(#modoNocturnoCheckbox:checked) h1,
+body:has(#modoNocturnoCheckbox:checked) h2,
+body:has(#modoNocturnoCheckbox:checked) h3,
+body:has(#modoNocturnoCheckbox:checked) h4,
+body:has(#modoNocturnoCheckbox:checked) h5,
+body:has(#modoNocturnoCheckbox:checked) h6 {
+  color: #ddd;
+}
+
+body:has(#modoNocturnoCheckbox:checked) a {
+  color: white;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .btn-dark {
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #ccc;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .btn-dark:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+body:has(#modoNocturnoCheckbox:checked).contacto .btn-enviar {
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #ccc;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body:has(#modoNocturnoCheckbox:checked).contacto .btn-enviar:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .navbar-nav .nav-link {
+  color: #bbb;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .navbar-nav .nav-link.active {
+  color: #fff;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .card {
+  background-color: #222;
+  border: 1px solid #444;
+  color: #ffffff;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .card-title {
+  color: #fff;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .card-text {
+  color: #ddd !important;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .sobre-nosotros-contenedor {
+  background-color: #222;
+  border: 1px solid #444;
+  color: #ffffff;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .sobre-nosotros-contenedor section {
+  background-color: #222;
+  border: 1px solid #444;
+  color: #ffffff;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .habilidad {
+  background-color: #222;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .servicios-contenedor {
+  background-color: #222;
+  color: #ffffff;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .servicios-intro {
+  background-color: #222;
+  color: #ffffff;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .servicios-grid .servicio {
+  background-color: #222;
+  border-color: #444;
+  color: #ffffff;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .razones {
+  background-color: #222;
+  border-color: #444;
+  color: #ffffff;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .servicios-contenedor h2,
+body:has(#modoNocturnoCheckbox:checked) .servicios-contenedor h3 {
+  color: white;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .razones ul {
+  color: white;
+}
+
+/* MODO NOCTURNO  */
+.modo-nocturno-toggle {
+  margin-top: auto;
+  position: fixed;
+  top: 65px;
+  right: 60px;
+  width: 45px;
+  height: 24px;
+  background: #ccc;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  transition: background 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.modo-nocturno-toggle .slider {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .modo-nocturno-toggle {
+  background: #666;
+}
+
+body:has(#modoNocturnoCheckbox:checked) .modo-nocturno-toggle .slider {
+  transform: translateX(25px);
+  background: #000;
+}
+
+/* CONTENEDORES GENERALES */
 html,
 body {
   height: 100%;
@@ -195,14 +420,26 @@ body {
     max-width: 100%;
   }
 }
+.pagina-sobre-nosotros .contenido-sobre-nosotros {
+  margin: 1rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.pagina-sobre-nosotros .contenido-sobre-nosotros {
+  margin: 1rem !important;
+}
+
 .navbar {
   width: 100%;
-  background-color: #212529 !important;
+  background-color: #212529;
   color: white;
 }
 
 .navbar-toggler {
-  margin-left: auto !important;
+  margin-left: auto;
 }
 
 .pagina__encabezado {
@@ -212,7 +449,7 @@ body {
 
 .navbar {
   width: 100%;
-  background-color: #212529 !important;
+  background-color: #212529;
   color: white;
   display: flex;
   justify-content: center;
@@ -265,17 +502,17 @@ body {
 }
 .pagina__pie a:hover {
   text-decoration: underline !important;
-  color: white !important;
+  color: white;
 }
 
 .pagina__pie_blog a {
   text-decoration: none !important;
-  color: #fff !important;
+  color: #fff;
   transition: text-decoration 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 .pagina__pie_blog a:hover {
   text-decoration: underline !important;
-  color: white !important;
+  color: white;
 }
 
 html,
@@ -294,7 +531,7 @@ footer {
   width: 100%;
 }
 
-/* === CARRUSEL / BANNER === */
+/* CARRUSEL / BANNER */
 .pagina__banner {
   width: 100%;
   max-width: 100%;
@@ -309,7 +546,7 @@ footer {
   border-radius: 8px;
 }
 
-/* === CONTENEDOR PRINCIPAL === */
+/* CONTENEDOR PRINCIPAL */
 .pagina__contenido {
   display: flex;
   justify-content: space-between;
@@ -325,14 +562,13 @@ footer {
   max-width: 33%;
 }
 
-/* === SECCIONES PRINCIPALES === */
+/*SECCIONES PRINCIPALES*/
 .contenido__principal,
 .contenido__articulo,
 .contenido__listas div,
 .servicios-contenedor div,
 .habilidad,
 .sobre-nosotros-contenedor section {
-  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 2rem;
@@ -350,7 +586,7 @@ footer {
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* === BARRA LATERAL === */
+/*BARRA LATERAL*/
 .contenido__lateral {
   background-color: #eef;
   border: 1px solid #ddd;
@@ -366,7 +602,7 @@ footer {
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
 }
 
-/* === CONTENEDOR GENERAL === */
+/* CONTENEDOR GENERAL*/
 .contenedor {
   width: 100%;
   max-width: 1200px;
@@ -388,6 +624,24 @@ footer {
     max-width: 100%;
     padding: 1rem;
   }
+}
+.contenedor .sobre-nosotros-contenedor section {
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+.contenedor .habilidad {
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.contenedor .contenido-sobre-nosotros {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* === TIPOGRAFÍA GENERAL === */
@@ -452,13 +706,21 @@ a:hover {
   text-decoration: underline;
 }
 
+/* ESTILOS PARA FORMULARIO */
 .formulario-grid {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   width: 100%;
+  text-align: left;
 }
 
+@media (min-width: 768px) {
+  .formulario-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .formulario-grid input,
 .formulario-grid textarea {
   width: 100%;
@@ -469,26 +731,15 @@ a:hover {
 }
 
 .formulario-grid .mensaje {
+  grid-column: 1/-1;
   width: 100%;
 }
 
 .formulario-grid .boton {
+  grid-column: 1/-1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
-}
-.formulario-grid .boton button {
-  padding: 0.8rem 2rem;
-  background-color: #212529;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease-in-out;
-}
-.formulario-grid .boton button:hover {
-  background-color: rgb(55.7432432432, 62.5, 69.2567567568);
 }
 
 @media (max-width: 767px) {
@@ -499,6 +750,29 @@ a:hover {
     width: 100%;
   }
 }
+.formulario-grid button {
+  padding: 0.8rem 2rem;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.formulario-grid .boton button {
+  background-color: #212529;
+}
+
+.formulario-grid button:hover {
+  background-color: #2980b9;
+}
+
+.formulario-grid .boton button:hover {
+  background-color: rgb(55.7432432432, 62.5, 69.2567567568);
+}
+
 /* === MEDIA QUERIES === */
 @media (max-width: 1024px) and (min-width: 768px) {
   .pagina__contenido {
@@ -548,5 +822,11 @@ a:hover {
     text-align: center;
   }
 }
+@media (max-width: 768px) {
+  .modo-nocturno-toggle {
+    top: 130px;
+    right: 30px;
+  }
+}
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */

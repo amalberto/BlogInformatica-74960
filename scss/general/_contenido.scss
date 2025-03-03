@@ -1,4 +1,5 @@
-/* === CARRUSEL / BANNER === */
+/* CARRUSEL / BANNER */
+
 .pagina__banner {
     width: 100%;
     max-width: 100%;
@@ -14,7 +15,8 @@
     }
 }
 
-/* === CONTENEDOR PRINCIPAL === */
+/* CONTENEDOR PRINCIPAL */
+
 .pagina__contenido {
     display: flex;
     justify-content: space-between;
@@ -31,14 +33,14 @@
     }
 }
 
-/* === SECCIONES PRINCIPALES === */
+/*SECCIONES PRINCIPALES*/
+
 .contenido__principal,
 .contenido__articulo,
 .contenido__listas div,
 .servicios-contenedor div,
 .habilidad,
 .sobre-nosotros-contenedor section {
-    background-color: $color-blanco;
     border: 1px solid #ddd;
     border-radius: $radius-base;
     padding: 2rem;
@@ -52,7 +54,8 @@
     }
 }
 
-/* === BARRA LATERAL === */
+/*BARRA LATERAL*/
+
 .contenido__lateral {
     background-color: $color-fondo-lateral;
     border: 1px solid #ddd;
@@ -69,7 +72,8 @@
     }
 }
 
-/* === CONTENEDOR GENERAL === */
+/* CONTENEDOR GENERAL*/
+
 .contenedor {
     width: 100%;
     max-width: 1200px;
@@ -88,4 +92,30 @@
         max-width: 100%;
         padding: 1rem;
     }
+
+
+
+    .sobre-nosotros-contenedor section {
+        padding: 2rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+    }
+
+    .habilidad {
+        background-color: $color-blanco;
+        color: $color-texto-claro;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+
+    .contenido-sobre-nosotros {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+
+    }
+
 }

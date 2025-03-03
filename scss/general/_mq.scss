@@ -67,3 +67,11 @@
         text-align: center;
     }
 }
+
+
+@include respond-to(mobile) {
+    .modo-nocturno-toggle {
+        top: 130px; 
+        right: 30px; 
+    }
+}

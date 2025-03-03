@@ -1,4 +1,5 @@
 // FOOTER
+
 .pagina__pie {
     width: 100%;
     background-color: $color-footer;
@@ -24,19 +25,19 @@
 
         &:hover {
             text-decoration: underline !important;
-            color: lighten($color-blanco, 20%) !important;
+            color: lighten($color-blanco, 20%);
         }
     }
 }
 
 .pagina__pie_blog a {
     text-decoration: none !important;
-    color: $color-blanco !important;
+    color: $color-blanco;
     transition: text-decoration 0.3s ease-in-out, color 0.3s ease-in-out;
 
     &:hover {
         text-decoration: underline !important;
-        color: lighten($color-blanco, 20%) !important;
+        color: lighten($color-blanco, 20%);
     }
 }
 

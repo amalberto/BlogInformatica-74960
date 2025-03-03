@@ -1,4 +1,4 @@
-/* RESET BÁSICO DE ESTILOS */
+/* RESET DE ESTILOS */
 html,
 body,
 div,
@@ -87,6 +87,49 @@ video {
     vertical-align: baseline;
 }
 
+div:not(
+    .contenido-sobre-nosotros,
+    .servicios-intro,
+    .servicios-grid,
+    .razones,
+    .contenido__principal,
+    .contenido__articulo,
+    .contenido__lateral,
+    .contenido__listas div,
+    .servicios-contenedor div,
+    .habilidad,
+    .sobre-nosotros-contenedor section
+),
+section:not(
+    .contenido-sobre-nosotros,
+    .servicios-intro,
+    .servicios-grid,
+    .razones,
+    .contenido__principal,
+    .contenido__articulo,
+    .contenido__lateral,
+    .contenido__listas div,
+    .servicios-contenedor div,
+    .habilidad,
+    .sobre-nosotros-contenedor section
+),
+article:not(
+    .contenido-sobre-nosotros,
+    .servicios-intro,
+    .servicios-grid,
+    .razones,
+    .contenido__principal,
+    .contenido__articulo,
+    .contenido__lateral,
+    .contenido__listas div,
+    .servicios-contenedor div,
+    .habilidad,
+    .sobre-nosotros-contenedor section
+) {
+    margin: 0;
+    padding: 0;
+}
+
 article,
 aside,
 details,
@@ -127,4 +170,20 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+
+.contenido-sobre-nosotros,
+.servicios-intro,
+.servicios-grid,
+.razones,
+.contenido__principal,
+.contenido__articulo,
+.contenido__lateral,
+.contenido__listas div,
+.servicios-contenedor div,
+.habilidad,
+.sobre-nosotros-contenedor section {
+    margin: 0.5rem !important;
+    padding: 0.5rem !important;  
 }

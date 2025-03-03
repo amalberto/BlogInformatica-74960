@@ -38,7 +38,13 @@
 	<link rel="stylesheet" href="../css/styles.css" />
 </head>
 
-<body>
+<body class="pagina sobre-nosotros">
+
+	<!-- Toggler de modo nocturno -->
+	<input type="checkbox" id="modoNocturnoCheckbox">
+	<label for="modoNocturnoCheckbox" class="modo-nocturno-toggle">
+		<span class="slider"></span>
+	</label>
 	<!-- HEADER -->
 	<header class="pagina__encabezado">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
@@ -109,50 +115,57 @@
 
 	<!-- MAIN -->
 	<main class="sobre-nosotros-contenedor">
-		<section class="sobre-nosotros-intro">
-			<h2>¿Quiénes somos?</h2>
-			<p>
-				En Soluciones Informáticas somos un equipo de profesionales apasionados por la tecnología y la
-				inteligencia artificial. Nos dedicamos a transformar empresas a través de soluciones IT innovadoras y
-				personalizadas.
-			</p>
-		</section>
+		<div class="contenido-sobre-nosotros">
+			<section class="sobre-nosotros-intro">
+				<h2>¿Quiénes somos?</h2>
+				<p>
+					En Soluciones Informáticas somos un equipo de profesionales apasionados por la tecnología y la
+					inteligencia artificial. Nos dedicamos a transformar empresas a través de soluciones IT innovadoras
+					y
+					personalizadas.
+				</p>
+			</section>
 
-		<section class="sobre-nosotros-experiencia">
-			<h2>Nuestra experiencia</h2>
-			<p>
-				Contamos con años de experiencia en el desarrollo de soluciones digitales, desde el diseño web hasta la
-				implementación de sistemas inteligentes que optimizan procesos y potencian el crecimiento empresarial.
-			</p>
-		</section>
+			<section class="sobre-nosotros-experiencia">
+				<h2>Nuestra experiencia</h2>
+				<p>
+					Contamos con años de experiencia en el desarrollo de soluciones digitales, desde el diseño web hasta
+					la
+					implementación de sistemas inteligentes que optimizan procesos y potencian el crecimiento
+					empresarial.
+				</p>
+			</section>
 
-		<section class="sobre-nosotros-habilidades">
-			<div class="habilidad">
-				<h3>Habilidades Técnicas</h3>
-				<ul>
-					<li>Desarrollo Web y Móvil</li>
-					<li>Integración de Inteligencia Artificial</li>
-					<li>Soluciones Cloud y Seguridad Informática</li>
-				</ul>
-			</div>
-			<div class="habilidad">
-				<h3>Habilidades Blandas</h3>
-				<ol>
-					<li>Comunicación efectiva</li>
-					<li>Trabajo en equipo</li>
-					<li>Resolución de problemas</li>
-				</ol>
-			</div>
-		</section>
+			<section class="sobre-nosotros-habilidades">
+				<div class="habilidad">
+					<h3>Habilidades Técnicas</h3>
+					<ul>
+						<li>Desarrollo Web y Móvil</li>
+						<li>Integración de Inteligencia Artificial</li>
+						<li>Soluciones Cloud y Seguridad Informática</li>
+					</ul>
+				</div>
+				<div class="habilidad">
+					<h3>Habilidades Blandas</h3>
+					<ol>
+						<li>Comunicación efectiva</li>
+						<li>Trabajo en equipo</li>
+						<li>Resolución de problemas</li>
+					</ol>
+				</div>
+			</section>
 
-		<section class="sobre-nosotros-objetivo">
-			<h2>Nuestro objetivo</h2>
-			<p>
-				Impulsar la transformación digital de nuestros clientes, implementando soluciones tecnológicas avanzadas
-				que generen valor y mejoren la eficiencia operativa.
-			</p>
-		</section>
+			<section class="sobre-nosotros-objetivo">
+				<h2>Nuestro objetivo</h2>
+				<p>
+					Impulsar la transformación digital de nuestros clientes, implementando soluciones tecnológicas
+					avanzadas
+					que generen valor y mejoren la eficiencia operativa.
+				</p>
+			</section>
+		</div>
 	</main>
+
 
 	<!-- FOOTER -->
 	<footer class="pagina__pie">

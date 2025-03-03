@@ -1,4 +1,5 @@
-/* === CONTENEDORES GENERALES === */
+/* CONTENEDORES GENERALES */
+
 html,
 body {
     height: 100%;
@@ -58,3 +59,18 @@ body {
         max-width: 100%;
     }
 }
+
+.pagina-sobre-nosotros {
+    .contenido-sobre-nosotros {
+        margin: 1rem; 
+        padding: 2rem;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+body.pagina-sobre-nosotros .contenido-sobre-nosotros {
+    margin: 1rem !important;
+}
+
