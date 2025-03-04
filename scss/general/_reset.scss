@@ -71,6 +71,7 @@ figcaption,
 footer,
 header,
 hgroup,
+main,
 menu,
 nav,
 output,
@@ -99,7 +100,10 @@ div:not(
     .contenido__listas div,
     .servicios-contenedor div,
     .habilidad,
-    .sobre-nosotros-contenedor section
+    .sobre-nosotros-contenedor section,
+    .carousel,
+    .carousel-inner,          
+    .carousel-item            
 ),
 section:not(
     .contenido-sobre-nosotros,
@@ -112,7 +116,10 @@ section:not(
     .contenido__listas div,
     .servicios-contenedor div,
     .habilidad,
-    .sobre-nosotros-contenedor section
+    .sobre-nosotros-contenedor section,
+    .carousel,
+    .carousel-inner,
+    .carousel-item
 ),
 article:not(
     .contenido-sobre-nosotros,
@@ -125,7 +132,10 @@ article:not(
     .contenido__listas div,
     .servicios-contenedor div,
     .habilidad,
-    .sobre-nosotros-contenedor section
+    .sobre-nosotros-contenedor section,
+    .carousel,
+    .carousel-inner,
+    .carousel-item
 ) {
     margin: 0;
     padding: 0;
@@ -173,7 +183,7 @@ img {
     display: block;
 }
 
-
+/* Mantén márgenes y paddings para ciertos elementos */
 .contenido-sobre-nosotros,
 .servicios-intro,
 .servicios-grid,
@@ -186,5 +196,5 @@ img {
 .habilidad,
 .sobre-nosotros-contenedor section {
     margin: 0.5rem !important;
-    padding: 0.5rem !important;  
+    padding: 0.5rem !important;
 }
